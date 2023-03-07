@@ -6,12 +6,12 @@ import java.util.ArrayList;
 class Main {
 	public static void main(String[] args) throws FileNotFoundException {
 
-	ArrayList<String> arrayList = new ArrayList<>();
-	FileReader fr = new FileReader("names.txt");
-	Scanner read = new Scanner(fr);
+	ArrayList<String> names = new ArrayList<>();
+	FileReader txt = new FileReader("names.txt");
+	Scanner read = new Scanner(txt);
 
     while (read.hasNext()) {
-      arrayList.add(read.nextLine());
+      names.add(read.nextLine());
       
     }
     
@@ -37,7 +37,7 @@ class Main {
     } else if(i == 4) {
         System.out.println("Current Students:");
       
-        for (String s : arrayList) {
+        for (String s : names) {
           System.out.println(s);
         }
       }
